@@ -1,0 +1,29 @@
+[tool.pyright]
+include = ["myapp", "mpesa"]
+exclude = [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/migrations"
+]
+venvPath = "."
+venv = "venv"
+pythonVersion = "3.8"
+pythonPlatform = "Linux"
+typeCheckingMode = "basic"
+useLibraryCodeForTypes = true
+stubPath = "typings"
+
+[tool.django-stubs]
+django_settings_module = "myapp.settings"
+
+[tool.pyright.executionEnvironments]
+[[tool.pyright.executionEnvironments]]
+root = "myapp"
+extraPaths = [".", "mpesa"]
+venv = "venv"
+
+[[tool.pyright.executionEnvironments]]
+root = "mpesa"
+extraPaths = [".", "myapp"]
+venv = "venv"
+ 

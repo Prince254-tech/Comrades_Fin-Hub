@@ -1,0 +1,39 @@
+{
+    "include": [
+        "myapp",
+        "mpesa"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/__pycache__",
+        "**/migrations"
+    ],
+    "venvPath": ".",
+    "venv": "venv",
+    "pythonVersion": "3.8",
+    "pythonPlatform": "Linux",
+    "typeCheckingMode": "basic",
+    "useLibraryCodeForTypes": true,
+    "extraPaths": [".", "venv/lib/python3.8/site-packages"],
+    "reportMissingImports": "warning",
+    "reportMissingTypeStubs": "warning",
+    "reportUnknownVariableType": "warning",
+    "reportUnknownArgumentType": "warning",
+    "reportUnknownMemberType": "warning",
+    "reportGeneralTypeIssues": "error",
+    "reportOptionalMemberAccess": "error",
+    "reportPrivateImportUsage": "error",
+    "stubPath": "typings",
+    "executionEnvironments": [
+        {
+            "root": "myapp",
+            "extraPaths": [".", "mpesa"],
+            "venv": "venv"
+        },
+        {
+            "root": "mpesa",
+            "extraPaths": [".", "myapp"],
+            "venv": "venv"
+        }
+    ]
+} 
